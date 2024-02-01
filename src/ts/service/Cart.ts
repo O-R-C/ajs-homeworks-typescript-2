@@ -11,6 +11,9 @@ export default class Cart {
     this._items.push(item);
   }
 
+  /**
+   * @returns список элементов в корзине
+   */
   get items(): Buyable[] {
     return [...this._items];
   }
