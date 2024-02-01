@@ -34,3 +34,7 @@ test('totalCost()', () => {
   expect(cart.totalCost()).toBe(3899);
 });
 
+test('totalCostWithSale()', () => {
+  expect(cart.totalCostWithSale(50)).toBe(3899 / 2);
+});
+
