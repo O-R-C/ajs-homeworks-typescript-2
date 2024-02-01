@@ -10,7 +10,6 @@ test('new card should be empty', () => {
 });
 
 test('add() should add item to cart', () => {
-  // const cart = new Cart();
   cart.add(
     new Movie(
       1111,
@@ -36,5 +35,11 @@ test('totalCost()', () => {
 
 test('totalCostWithSale()', () => {
   expect(cart.totalCostWithSale(50)).toBe(3899 / 2);
+});
+
+test('removeItem()', () => {
+  cart.removeItem(1111);
+
+  expect(cart.items.length).toBe(2);
 });
 
