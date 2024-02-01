@@ -10,4 +10,9 @@ export default class Cart {
   get items(): Buyable[] {
     return [...this._items];
   }
+
+  totalCost(): number {
+    return this._items.reduce((acc, item) => acc + item.price, 0);
+  }
 }
+

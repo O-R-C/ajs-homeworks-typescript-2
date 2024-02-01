@@ -22,4 +22,5 @@ cart.add(
 );
 
 console.log(cart.items);
+console.log(cart.totalCost());
 
