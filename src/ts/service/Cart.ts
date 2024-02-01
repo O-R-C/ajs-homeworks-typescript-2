@@ -19,5 +19,9 @@ export default class Cart {
     const cost = this.totalCost();
     return cost - (cost * sale) / 100;
   }
+
+  removeItem(id: number): void {
+    this._items = this._items.filter((item) => item.id !== id);
+  }
 }
 

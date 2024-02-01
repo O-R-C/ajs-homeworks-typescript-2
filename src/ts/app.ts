@@ -25,3 +25,9 @@ console.log(cart.items);
 console.log(cart.totalCost());
 console.log(cart.totalCostWithSale(50));
 
+cart.removeItem(1111);
+
+console.log(cart.items);
+console.log(cart.totalCost());
+console.log(cart.totalCostWithSale(50));
+
