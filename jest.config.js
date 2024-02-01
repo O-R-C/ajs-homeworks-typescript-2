@@ -1,6 +1,6 @@
 module.exports = {
   verbose: true,
   testEnvironment: 'node',
-  coveragePathIgnorePatterns: ['Interfaces/*.{ts}'],
+  coveragePathIgnorePatterns: ['<rootDir>/src/ts/domain/'],
 };
 
