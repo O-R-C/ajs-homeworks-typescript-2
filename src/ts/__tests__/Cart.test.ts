@@ -1,14 +1,16 @@
 import Cart from '../service/Cart';
 import Movie from '../domain/Movie';
+import Book from '../domain/Book';
+import MusicAlbum from '../domain/MusicAlbum';
+
+const cart = new Cart();
 
 test('new card should be empty', () => {
-  const cart = new Cart();
-
   expect(cart.items.length).toBe(0);
 });
 
 test('add() should add item to cart', () => {
-  const cart = new Cart();
+  // const cart = new Cart();
   cart.add(
     new Movie(
       1111,
@@ -23,5 +25,12 @@ test('add() should add item to cart', () => {
   );
 
   expect(cart.items.length).toBe(1);
+});
+
+test('totalCost()', () => {
+  cart.add(new Book(1001, 'War and Piece', 'Leo Tolstoy', 2000, 1225));
+  cart.add(new MusicAlbum(1008, 'Meteora', 'Linkin Park', 900));
+
+  expect(cart.totalCost()).toBe(3899);
 });
 

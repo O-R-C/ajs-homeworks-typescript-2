@@ -14,5 +14,10 @@ export default class Cart {
   totalCost(): number {
     return this._items.reduce((acc, item) => acc + item.price, 0);
   }
+
+  totalCostWithSale(sale: number): number {
+    const cost = this.totalCost();
+    return cost - (cost * sale) / 100;
+  }
 }
 

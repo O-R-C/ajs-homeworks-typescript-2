@@ -23,4 +23,5 @@ cart.add(
 
 console.log(cart.items);
 console.log(cart.totalCost());
+console.log(cart.totalCostWithSale(50));
 
